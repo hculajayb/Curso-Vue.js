@@ -12,6 +12,9 @@
   </span>
 </div>
 
+<div id="app-3">
+  <span v-if="seen">Ahora me ves</span>
+</div>
 
 
 <script>
@@ -21,11 +24,18 @@
       message: 'Hola Vue!'
     }
   })
-  
+
 var app2 = new Vue({
   el: '#app-2',
   data: {
     message: 'Usted cargó esta página el ' + new Date().toLocaleString()
+  }
+})
+
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
   }
 })
 
