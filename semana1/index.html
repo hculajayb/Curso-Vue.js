@@ -24,7 +24,12 @@
   </ol>
 </div>
 
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Mensaje invertido</button>
+</div>
 
+<!-- ------------------------------------------------------- -->
 <script>
   var app = new Vue({
     el: '#app',
@@ -55,6 +60,18 @@ var app4 = new Vue({
       { text: 'Aprender Vue' },
       { text: 'Construir algo increíble' }
     ]
+  }
+})
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hola Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
   }
 })
 
